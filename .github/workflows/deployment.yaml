@@ -28,9 +28,9 @@ jobs:
         uses: actions/checkout@v3
       - uses: ./.github/workflows/composite/docker
         with:
-          image_name: ${{ secrets.REGISTRY_ENDPOINT }}/${{ env.SERVICE_NAME }}:${{ env.IMAGE_TAG }}
+          image_name: ${{ secrets.REGISTRY_ENDPOINT }}/${{ env.SERVICE_NAME }}:${{ env.IMAGE_TAG }} # ! REGISTRY_ENDPOINT = ghcr.io/username
           service_name: ${{ env.SERVICE_NAME }} 
-          build_context: ${{ env.BUILD_CONTEXT }}  # * where build
+          build_context: ${{ env.BUILD_CONTEXT }}  # * where build 
           registry_host: ${{ secrets.REGISTRY_HOST }} # * --- which registry
           registry_username: ${{ github.actor }} # * github will takecaire
           registry_password: ${{ secrets.GHCR_PAT }} # ! this PAT
