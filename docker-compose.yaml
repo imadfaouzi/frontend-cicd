@@ -8,7 +8,7 @@ networks:
 
 services:
 
-  abb-frontend:
+  frontend-cicd:
     image: ghcr.io/imadfaouzi/frontend-cicd
     container_name: frontend-cicd
     networks:
