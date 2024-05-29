@@ -1,0 +1,16 @@
+version: '3.8'
+
+networks:
+  main-network:
+    name: main-network
+    external: true
+    driver: bridge
+
+services:
+
+  abb-frontend:
+    image: ghcr.io/imadfaouzi/frontend-cicd
+    container_name: frontend-cicd
+    networks:
+      - main-network
+    restart: always
