@@ -14,5 +14,4 @@ services:
     networks:
       - main-network
     restart: always
-    ports:
-      - "80:80" 
+    
