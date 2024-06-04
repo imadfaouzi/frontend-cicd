@@ -3,7 +3,7 @@ version: '3.8'
 networks:
   main-network:
     name: main-network
-    external: true
+    external: false
     driver: bridge
 
 services:
@@ -13,5 +13,4 @@ services:
     container_name: frontend-cicd
     networks:
       - main-network
-    restart: always
-    
+    restart: always 
