@@ -3,7 +3,7 @@ version: '3.8'
 networks:
   main-network:
     name: main-network
-    external: false
+    external: true
     driver: bridge
 
 services:
